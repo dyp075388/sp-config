@@ -1,6 +1,13 @@
 spring:
   application:
     name: zuul
+
+#连接rabbitmq
+  rabbitmq:
+    host: 192.168.64.140
+    port: 5672
+    username: admin
+    password: admi
     
 server:
   port: 3001
@@ -10,14 +17,14 @@ eureka:
     service-url:
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
       
-#配置API网关监控路径（如果在eureka中的服务id和url中的访问地址相同默认不需要配置）
+#閰嶇疆API缃戝叧鐩戞帶璺緞锛堝鏋滃湪eureka涓殑鏈嶅姟id鍜寀rl涓殑璁块棶鍦板潃鐩稿悓榛樿涓嶉渶瑕侀厤缃級
 #zuul:
  # routes:
   #  item-service: /item-service/**
    # user-service: /user-service/**
     # order-service: /order-service/**
 
-#启用重试,负载均衡有默认配置,单机重试0,集群的不同服务器重试1
+#鍚敤閲嶈瘯,璐熻浇鍧囪　鏈夐粯璁ら厤缃�,鍗曟満閲嶈瘯0,闆嗙兢鐨勪笉鍚屾湇鍔″櫒閲嶈瘯1
 zuul:
   retryable: true
   
@@ -35,7 +42,7 @@ hystrix:
           thread:
             timeoutInMilliseconds: 500
 
-#暴露监控端点
+#鏆撮湶鐩戞帶绔偣
 management:
   endpoints:
     web:

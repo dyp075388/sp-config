@@ -9,7 +9,13 @@ sp:
 spring:
   application:
     name: user-service
-    
+
+#连接rabbitmq
+  rabbitmq:
+    host: 192.168.64.140
+    port: 5672
+    username: admin
+    password: admi    
 server:
   port: 8101
 

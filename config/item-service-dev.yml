@@ -2,10 +2,17 @@ spring:
   application:
     name: item-service
     
+    
+#连接rabbitmq
+  rabbitmq:
+    host: 192.168.64.140
+    port: 5672
+    username: admin
+    password: admi  
 # server:
 #  port: 8001
 
-#添加eureka注册中心的地址
+#濞ｈ濮瀍ureka濞夈劌鍞芥稉顓炵妇閻ㄥ嫬婀撮崸锟�
 eureka:
   client:
     service-url:
