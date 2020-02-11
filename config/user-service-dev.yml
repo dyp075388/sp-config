@@ -12,10 +12,10 @@ spring:
 
 #连接rabbitmq
   rabbitmq:
-    host: 192.168.64.140
+    host: 192.168.75.129
     port: 5672
     username: admin
-    password: admi    
+    password: admin    
 server:
   port: 8101
 
